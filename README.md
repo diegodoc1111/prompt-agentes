@@ -18,16 +18,21 @@ Hecho por [Diego Osorio](https://instagram.com/soydiegoosorio).
 | 🖥️ | El diseñador | Tu página publicada en Cloudflare con el video, casos de éxito y la promesa |
 | 📣 | El tráfico | Tus campañas en Meta Ads, optimizadas (siempre te pide confirmar el presupuesto) |
 
-Los agentes 1, 2 y 3 funcionan en la app de Claude, incluso con el plan gratis. Los agentes 4 y 5 necesitan Claude Code
-(plan Pro), porque publican tu página y suben tus campañas.
+Los 5 agentes completos se hacen **desde el computador** (Windows o Mac) con Claude Code (plan Pro), porque publican tu
+página y suben tus campañas. Los agentes 1, 2 y 3 también funcionan en la app de Claude, incluso en el celular.
+
+Sirve para coaches, consultores, agencias e infoproductos, y para empresarios y dueños de negocio que quieren automatizar
+tareas que hoy hace una persona, para no tener que contratar a más gente.
 
 ## El prompt
 
 Está en [`docs/prompt.txt`](docs/prompt.txt). Cópialo completo y pégalo en una conversación nueva de Claude.
 
-## Esto es solo una muestra de Imperio
+## Deja de hacerlo todo a mano
 
-En **Imperio** tengo todo un equipo de agentes de IA ya construidos y probados que ejecutan el marketing y traen las
-ventas de los negocios de mis clientes: guiones, anuncios, VSL, campañas en Meta Ads, carruseles y respuesta por
-WhatsApp e Instagram. Haces en 3 días lo que antes te tomaba 30; mis clientes han sumado entre 5.000 y 10.000 dólares
-extra cada mes a su facturación. **[Escríbeme "IMPERIO" por Instagram](https://ig.me/m/soydiegoosorio).**
+Haz en 3 días el trabajo de todo un mes. Ten un equipo de marketing de 4 personas trabajando para ti por unos $25 al mes:
+**los agentes Imperio**. Te hacen el contenido, los carruseles, los anuncios, las páginas web, los VSL, las campañas en Meta
+y hasta responden tus mensajes. Sin saber de tecnología: solo copias, pegas y facturas.
+
+Son los mismos agentes que hoy les suman entre $5.000 y $10.000 dólares extra al mes a los negocios con los que trabajo.
+**[Escríbeme "IMPERIO" por Instagram](https://ig.me/m/soydiegoosorio).**

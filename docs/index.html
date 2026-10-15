@@ -62,6 +62,7 @@
   .term pre { margin: 0; padding: 14px 16px 16px; overflow-x: auto; font: 14px/1.7 var(--mono); color: #E8E2D6; white-space: pre-wrap; word-break: break-word; }
   .term.largo pre { max-height: 420px; overflow-y: auto; }
   .term .p { color: var(--terra); }
+  .ruta { font-weight: 700; color: var(--tinta); } .ruta .f { color: var(--terra); font-weight: 400; padding: 0 2px; }
   .term .ag { color: var(--terra); font-weight: 600; }
   .copiar { margin-top: 10px; display: inline-flex; gap: 8px; align-items: center; cursor: pointer; border: 1px solid var(--linea); background: #fff; color: var(--tinta); border-radius: 999px; padding: 8px 14px; font: 600 14px var(--sans); }
   .acciones { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin-top: 4px; }
@@ -99,7 +100,7 @@
   </div>
 
   <h1><em>5 agentes de IA</em> que hacen el trabajo de 5 empleados</h1>
-  <p class="bajada">Es el prompt de <strong>Claude Code</strong> con el que les he sumado entre 5.000 y 10.000 dólares extra de facturación al mes a los negocios con los que trabajo. Le das tu negocio y Claude arma <strong>5 agentes que trabajan en cadena</strong>: investigan a tu cliente, escriben tus anuncios y tu video de ventas, publican tu página y suben tus campañas.</p>
+  <p class="bajada">Es el prompt de <strong>Claude Code</strong> con el que les he sumado entre 5.000 y 10.000 dólares extra de facturación al mes a los negocios con los que trabajo. Le das tu negocio y Claude arma <strong>5 agentes que trabajan en cadena</strong>: investigan a tu cliente, escriben tus anuncios y tu video de ventas, publican tu página y suben tus campañas. <strong>Trabajo por el que hoy tendrías que contratar a alguien.</strong></p>
 
   <div class="agentes" aria-label="Los 5 agentes">
     <div class="agente"><span class="n">1</span><span class="e">🔎</span><b>El investigador</b><small>Conoce a tu cliente ideal a fondo</small></div>
@@ -110,24 +111,46 @@
   </div>
   <div class="cadena"><span>⛓️</span><div>Cada agente trabaja con lo que le entregó el anterior. <b>El resultado:</b> clientes potenciales calificados que llegan a tu página a pedir una cita.</div></div>
 
-  <ul class="avisos">
-    <li>📱 <b>Los agentes 1, 2 y 3 funcionan en la app de Claude</b>, incluso con el plan gratis. Los agentes 4 y 5 necesitan <b>Claude Code</b> (plan Pro), porque son los que publican tu página y suben tus campañas.</li>
-    <li>⏱️ <b>Copiarlo toma 10 segundos.</b> Responder las preguntas que te hace Claude, unos 10 minutos. Lo demás lo hacen los agentes.</li>
-    <li>🎯 <b>Sirve para</b> coaches, consultores, agencias, infoproductos y negocios de servicios que venden por cita o por llamada.</li>
-  </ul>
+  <a class="loop" href="#imperio">🚀 <b>Deja de hacerlo todo a mano y haz en 3 días el trabajo de todo un mes.</b> Ten un equipo de marketing de 4 personas trabajando para ti por unos $25 al mes: los agentes Imperio.<span>Al final te cuento qué hacen ↓</span></a>
 
-  <a class="loop" href="#imperio">🎁 <b>Este prompt es solo una muestra de Imperio</b>, el equipo de agentes de IA que hace el marketing y trae las ventas de los negocios de mis clientes: con él hacen en 3 días lo que antes les tomaba 30.<span>Al final te cuento qué hacen los agentes que ya tengo montados ↓</span></a>
+  <ul class="avisos">
+    <li>💻 <b>Los 5 agentes completos se hacen desde el computador</b> (Windows o Mac) con <b>Claude Code</b>, porque publican tu página y suben tus campañas. Los agentes 1, 2 y 3 también funcionan en la app de Claude, incluso en el celular y con el plan gratis.</li>
+    <li>⏱️ <b>Copiarlo toma 10 segundos.</b> Responder las preguntas que te hace Claude, unos 10 minutos. Lo demás lo hacen los agentes.</li>
+    <li>🎯 <b>Sirve para</b> coaches, consultores, agencias e infoproductos que venden por cita o por llamada, y para <b>empresarios y dueños de negocio</b> que quieren automatizar tareas que hoy hace una persona, para no tener que contratar a más gente.</li>
+  </ul>
 
   <section class="paso">
     <div class="num">1</div>
-    <h2>Ten tu cuenta de <em>Claude</em></h2>
-    <p>Si ya usas Claude, salta al paso 2. Si no, crea tu cuenta gratis. Para los 5 agentes completos vas a necesitar el plan <b>Pro</b> y la app de escritorio, que trae Claude Code.</p>
-    <a class="boton" href="https://claude.ai" target="_blank" rel="noopener">Entrar a Claude →</a>
-    <p class="nota">Con el plan gratis ya puedes correr los agentes 1, 2 y 3 en la app: la investigación, los anuncios y el guion de tu video de ventas.</p>
+    <h2>Ten tu cuenta de <em>Claude</em> con plan Pro</h2>
+    <p>Si ya pagas Claude Pro o Max, salta al paso 2. Si no, crea tu cuenta y activa el plan <b>Pro</b>: es el más económico que incluye Claude Code.</p>
+    <a class="boton" href="https://claude.com/pricing" target="_blank" rel="noopener">Ver planes de Claude →</a>
+    <p class="nota">¿Solo quieres probar los agentes 1, 2 y 3? Con el plan gratis y la app del celular te alcanza: salta al paso 3.</p>
   </section>
 
   <section class="paso">
     <div class="num">2</div>
+    <h2>Instala Claude Code <em>en tu computador</em></h2>
+    <p><b>Esto se hace desde el computador (Windows o Mac), no desde el celular.</b> La forma más fácil es la app de escritorio de Claude, que ya trae Claude Code:</p>
+    <a class="boton" href="https://claude.ai/download" target="_blank" rel="noopener">⬇ Descargar Claude para el computador</a>
+    <ol>
+      <li>Instala la app y entra con el mismo correo de tu cuenta.</li>
+      <li>Dentro de la app, entra a la pestaña <b>Code</b>.</li>
+      <li>Crea una carpeta para tu negocio (por ejemplo <code>Documentos\Mi negocio</code>) y elígela como carpeta de trabajo.</li>
+    </ol>
+    <p class="ruta">App de Claude <span class="f">→</span> pestaña Code <span class="f">→</span> elige tu carpeta</p>
+    <p class="nota">Si Claude te pide permiso para leer archivos o correr comandos, acéptalo: así es como trabaja por ti.</p>
+    <details>
+      <summary>¿Prefieres la terminal? (opcional)</summary>
+      <p>También puedes instalar Claude Code con un comando. En <b>Windows</b> abre PowerShell y pega:</p>
+      <div class="term"><div class="barra"><i style="background:#FF5F57"></i><i style="background:#FEBC2E"></i><i style="background:#28C840"></i><span>PowerShell</span></div><pre>irm https://claude.ai/install.ps1 | iex</pre></div>
+      <p>En <b>Mac</b> abre Terminal y pega:</p>
+      <div class="term"><div class="barra"><i style="background:#FF5F57"></i><i style="background:#FEBC2E"></i><i style="background:#28C840"></i><span>Terminal</span></div><pre>curl -fsSL https://claude.ai/install.sh | bash</pre></div>
+      <p>Cierra y vuelve a abrir la terminal, entra a tu carpeta y escribe <code>claude</code>. La primera vez te pide iniciar sesión en el navegador.</p>
+    </details>
+  </section>
+
+  <section class="paso">
+    <div class="num">3</div>
     <h2>Copia <em>el prompt</em></h2>
     <p>Este es el prompt completo, tal como lo leo en el video:</p>
     <div class="term largo">
@@ -154,9 +177,9 @@ Antes de empezar, hazme las preguntas que necesites sobre mi nicho, mi cliente i
   </section>
 
   <section class="paso">
-    <div class="num">3</div>
+    <div class="num">4</div>
     <h2>Pégalo y responde <em>sus preguntas</em></h2>
-    <p>Abre una conversación nueva (en <b>Claude Code</b> si vas a usar los 5 agentes), pega el prompt y dale Enter. Antes de arrancar, Claude te va a preguntar por tu nicho, tu cliente ideal, tu oferta, tu precio y tu negocio. <b>Entre más detalle le des, mejor te queda.</b></p>
+    <p>En la pestaña <b>Code</b>, abre una sesión nueva en tu carpeta, pega el prompt y dale Enter (si solo vas a usar los agentes 1, 2 y 3, también sirve un chat normal de Claude). Antes de arrancar, Claude te va a preguntar por tu nicho, tu cliente ideal, tu oferta, tu precio y tu negocio. <b>Entre más detalle le des, mejor te queda.</b></p>
     <h3>Ten a mano antes de empezar</h3>
     <ul>
       <li>Qué vendes, a quién y a qué precio.</li>
@@ -168,7 +191,7 @@ Antes de empezar, hazme las preguntas que necesites sobre mi nicho, mi cliente i
   </section>
 
   <section class="paso">
-    <div class="num">4</div>
+    <div class="num">5</div>
     <h2>Conecta los <em>agentes 4 y 5</em></h2>
     <p>Para publicar tu página y subir tus campañas, Claude Code se conecta a tu cuenta de <b>Cloudflare</b> (donde vive tu página, es gratis) y a tu cuenta de <b>Meta Ads</b>. Si es tu primera vez, pégale este mensaje en Claude Code:</p>
     <div class="term">
@@ -176,7 +199,7 @@ Antes de empezar, hazme las preguntas que necesites sobre mi nicho, mi cliente i
       <pre id="conectar"><span class="p">❯</span> Instala y conecta lo que necesites para publicar mi página en Cloudflare y subir campañas a mi cuenta de Meta Ads. Guíame paso a paso, explícame todo sin tecnicismos y pregúntame antes de gastar cualquier dinero.</pre>
     </div>
     <button class="copiar" type="button" data-copiar-de="conectar">📋 Copiar el mensaje</button>
-    <p class="nota" style="margin-top:12px">Los inicios de sesión se hacen en la ventana que Claude te abre en el navegador: <b>nunca le pegues contraseñas en el chat</b>. La conexión con Meta Ads es la parte más técnica; si ahí te trabas, <a href="#imperio">más abajo te cuento cómo te la dejamos lista</a>.</p>
+    <p class="nota" style="margin-top:12px">Los inicios de sesión se hacen en la ventana que Claude te abre en el navegador: <b>nunca le pegues contraseñas en el chat</b>. La conexión con Meta Ads es la parte más técnica; si prefieres no lidiar con eso, <a href="#imperio">mira los agentes Imperio</a>: sin saber de tecnología, solo copias, pegas y facturas.</p>
   </section>
 
   <section class="seccion">
@@ -193,8 +216,12 @@ Antes de empezar, hazme las preguntas que necesites sobre mi nicho, mi cliente i
   <section class="seccion">
     <h2>Preguntas <em>frecuentes</em></h2>
     <details>
+      <summary>¿Lo puedo hacer desde el celular?</summary>
+      <p>Los agentes 1, 2 y 3 sí, en la app de Claude. Los 5 completos se hacen desde el computador (Windows o Mac), porque Claude Code publica tu página y sube tus campañas desde tu equipo.</p>
+    </details>
+    <details>
       <summary>¿Cuánto me cuesta?</summary>
-      <p>El prompt es gratis. Claude tiene plan gratis (te alcanza para los agentes 1, 2 y 3) y plan Pro de unos 20 dólares al mes (los 5 agentes con Claude Code). Publicar la página en Cloudflare es gratis. Lo único que pagas aparte es tu presupuesto de anuncios en Meta.</p>
+      <p>El prompt es gratis. Claude tiene plan gratis (te alcanza para los agentes 1, 2 y 3) y plan Pro de unos 20 a 25 dólares al mes según tu país (los 5 agentes con Claude Code). Publicar la página en Cloudflare es gratis. Lo único que pagas aparte es tu presupuesto de anuncios en Meta.</p>
     </details>
     <details>
       <summary>¿Va a gastar plata en anuncios sin preguntarme?</summary>
@@ -215,17 +242,18 @@ Antes de empezar, hazme las preguntas que necesites sobre mi nicho, mi cliente i
   </section>
 
   <section class="imperio" id="imperio">
-    <h2>Esto es solo <em>una muestra</em> de Imperio</h2>
-    <p>Con este prompt, Claude te arma el plan y los primeros entregables. En Imperio tengo <b>todo un equipo de agentes de IA ya construidos y probados</b> que además <b>ejecutan</b>: hacen el trabajo de marketing por ti y traen las ventas del negocio:</p>
+    <h2>Deja de hacerlo todo <em>a mano</em></h2>
+    <p class="cifra">Haz en <em>3 días</em> el trabajo de todo un mes.</p>
+    <p>Ten un equipo de marketing de 4 personas trabajando para ti por unos <b>$25 al mes</b>: <b>los agentes Imperio</b>. Te hacen:</p>
     <ul>
-      <li>✍️ Escriben tus guiones, tus anuncios y tu video de ventas (VSL).</li>
-      <li>🎬 Editan tus reels y crean anuncios animados.</li>
-      <li>📊 Montan y ajustan tus campañas en Meta Ads.</li>
-      <li>🖼️ Diseñan tus carruseles y miniaturas.</li>
-      <li>💬 Responden por WhatsApp e Instagram y agendan a tus clientes.</li>
+      <li>✍️ El contenido y los carruseles.</li>
+      <li>📣 Los anuncios y los VSL.</li>
+      <li>🖥️ Las páginas web.</li>
+      <li>📊 Las campañas en Meta.</li>
+      <li>💬 Y hasta responden tus mensajes.</li>
     </ul>
-    <p class="cifra">Haces en <em>3 días</em> lo que antes te tomaba <em>30</em>.</p>
-    <p>Es exactamente lo mismo que usan mis clientes, que han sumado <b>entre 5.000 y 10.000 dólares extra cada mes</b> a su facturación. Y si la parte técnica te traba, te lo dejamos conectado y funcionando.</p>
+    <p><b>Sin saber de tecnología: solo copias, pegas y facturas.</b></p>
+    <p>Son los mismos agentes que hoy les suman <b>entre $5.000 y $10.000 dólares extra al mes</b> a los negocios con los que trabajo.</p>
     <a class="boton" href="https://ig.me/m/soydiegoosorio" target="_blank" rel="noopener">Escríbeme “IMPERIO” por Instagram →</a>
     <p class="nota">Te cuento cómo funciona y si encaja con tu negocio.</p>
   </section>
