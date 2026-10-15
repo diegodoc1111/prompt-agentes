@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>El prompt de los 5 agentes de IA que hacen el trabajo de 5 empleados</title>
+<meta name="description" content="El prompt de Claude Code con 5 agentes de IA que investigan a tu cliente, escriben tus anuncios y tu video de ventas, publican tu página y suben tus campañas. Gratis, en español, cópialo y pégalo.">
+<meta property="og:title" content="5 agentes de IA que hacen el trabajo de 5 empleados — el prompt de Claude Code">
+<meta property="og:description" content="Investigan a tu cliente, escriben tus anuncios y tu video de ventas, publican tu página y suben tus campañas. Gratis, en español: cópialo y pégalo.">
+<meta property="og:image" content="https://diegodoc1111.github.io/prompt-agentes/img/og.jpg">
+<meta property="og:url" content="https://diegodoc1111.github.io/prompt-agentes/">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🤖</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --fondo: #EEE8DB; --tinta: #1F1D1A; --texto: #3A3733; --suave: #6E6A63;
+    --terra: #D9774F; --terra-osc: #B85C37; --rosa: #F6DED5; --carta: #FBF8F2; --linea: #E0D8C8; --term: #1E1C1A;
+    --serif: "Instrument Serif", Georgia, "Times New Roman", serif;
+    --sans: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    --mono: "JetBrains Mono", ui-monospace, "Cascadia Mono", Consolas, monospace;
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body { margin: 0; background: var(--fondo); color: var(--texto); font: 17px/1.6 var(--sans); }
+  main { max-width: 720px; margin: 0 auto; padding: 32px 22px 64px; }
+  .cabeza { display: flex; align-items: flex-end; gap: 18px; margin: 8px 0 18px; }
+  .cabeza img { width: 92px; height: auto; image-rendering: pixelated; flex: none; }
+  .etiqueta { display: inline-block; font: 600 13px/1 var(--mono); letter-spacing: .08em; color: var(--terra-osc); background: var(--rosa); padding: 8px 12px; border-radius: 999px; }
+  h1 { font: 400 clamp(40px, 8.5vw, 62px)/1.02 var(--serif); color: var(--tinta); margin: 14px 0 14px; letter-spacing: -.01em; }
+  h1 em, h2 em { color: var(--terra); }
+  .bajada { font-size: 19px; margin: 0 0 22px; } .bajada strong { color: var(--tinta); }
+  .agentes { display: grid; grid-template-columns: repeat(5, 1fr); gap: 8px; margin: 0 0 10px; }
+  .agente { position: relative; background: var(--carta); border: 1px solid var(--linea); border-radius: 14px; padding: 14px 8px 10px; text-align: center; }
+  .agente .n { position: absolute; top: 8px; left: 10px; font: 600 12px/1 var(--mono); color: var(--terra-osc); }
+  .agente .e { display: block; font-size: 30px; line-height: 1.1; }
+  .agente b { display: block; font: 400 18px/1.1 var(--serif); color: var(--tinta); margin: 6px 0 4px; }
+  .agente small { display: block; font-size: 12.5px; line-height: 1.35; color: var(--suave); }
+  .cadena { display: flex; align-items: center; gap: 10px; background: var(--tinta); color: #E8E2D6; border-radius: 14px; padding: 12px 16px; margin: 0 0 26px; font-size: 15px; }
+  .cadena b { color: #fff; } .cadena span { font-size: 22px; }
+  @media (max-width: 600px) { .agentes { grid-template-columns: repeat(2, 1fr); } .agente:last-child { grid-column: span 2; } }
+  .avisos { display: grid; gap: 10px; margin: 0 0 34px; padding: 0; list-style: none; }
+  .avisos li { background: var(--carta); border: 1px solid var(--linea); border-radius: 14px; padding: 12px 16px; font-size: 15.5px; }
+  .avisos li b { color: var(--tinta); }
+  .paso { position: relative; margin: 0 0 30px; padding: 22px 20px 20px; background: var(--carta); border: 1px solid var(--linea); border-radius: 20px; }
+  .num { position: absolute; top: -16px; left: 18px; width: 36px; height: 36px; border-radius: 50%; background: var(--terra); color: #fff; font: 700 17px/36px var(--sans); text-align: center; box-shadow: 0 2px 0 var(--terra-osc); }
+  h2 { font: 400 30px/1.15 var(--serif); color: var(--tinta); margin: 8px 0 10px; }
+  h3 { font: 700 16px/1.3 var(--sans); color: var(--tinta); margin: 18px 0 6px; }
+  .paso p { margin: 0 0 12px; } .paso p:last-child { margin-bottom: 0; }
+  .paso ol, .paso ul { margin: 0 0 12px; padding-left: 22px; } .paso li { margin: 5px 0; }
+  a { color: var(--terra-osc); text-underline-offset: 3px; }
+  .boton { display: flex; align-items: center; justify-content: center; gap: 10px; margin: 14px 0 12px; padding: 16px 20px; border-radius: 999px; background: var(--terra); color: #fff; text-decoration: none; font: 700 18px/1.2 var(--sans); box-shadow: 0 3px 0 var(--terra-osc); border: 0; width: 100%; cursor: pointer; }
+  .boton:active { transform: translateY(2px); box-shadow: 0 1px 0 var(--terra-osc); }
+  .boton.sec { background: #fff; color: var(--tinta); border: 1px solid var(--linea); box-shadow: 0 3px 0 var(--linea); }
+  .nota { font-size: 14.5px; color: var(--suave); }
+  .term { background: var(--term); border-radius: 14px; overflow: hidden; margin: 12px 0 0; box-shadow: 0 6px 20px rgba(30,20,15,.22); }
+  .term .barra { display: flex; align-items: center; gap: 7px; padding: 10px 14px; background: #2A2724; font: 12.5px var(--mono); color: #9E978C; }
+  .term .barra i { width: 11px; height: 11px; border-radius: 50%; display: inline-block; } .term .barra span { margin-left: 8px; }
+  .term pre { margin: 0; padding: 14px 16px 16px; overflow-x: auto; font: 14px/1.7 var(--mono); color: #E8E2D6; white-space: pre-wrap; word-break: break-word; }
+  .term.largo pre { max-height: 420px; overflow-y: auto; }
+  .term .p { color: var(--terra); }
+  .term .ag { color: var(--terra); font-weight: 600; }
+  .copiar { margin-top: 10px; display: inline-flex; gap: 8px; align-items: center; cursor: pointer; border: 1px solid var(--linea); background: #fff; color: var(--tinta); border-radius: 999px; padding: 8px 14px; font: 600 14px var(--sans); }
+  .acciones { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin-top: 4px; }
+  .acciones a { font: 600 14px var(--sans); }
+  .rondas { display: grid; gap: 10px; margin: 12px 0 0; }
+  .ronda { display: flex; gap: 14px; background: #fff; border: 1px solid var(--linea); border-radius: 14px; padding: 12px 14px; }
+  .ronda .n { flex: none; font: 400 30px/1 var(--serif); color: var(--terra); width: 26px; }
+  .ronda b { color: var(--tinta); }
+  .seccion { margin: 44px 0 0; } .seccion h2 { font-size: 32px; }
+  .seccion ul { padding-left: 22px; } .seccion li { margin: 6px 0; }
+  details { background: var(--carta); border: 1px solid var(--linea); border-radius: 14px; padding: 14px 16px; margin: 10px 0; }
+  summary { cursor: pointer; font-weight: 700; color: var(--tinta); } details p { margin: 10px 0 0; }
+  code { font: 14px var(--mono); background: #fff; border: 1px solid var(--linea); border-radius: 6px; padding: 1px 6px; }
+  .loop { display: block; background: var(--rosa); border: 1px solid #EBC3B3; border-left: 6px solid var(--terra); border-radius: 14px;
+          padding: 14px 16px; margin: 0 0 30px; font-size: 16px; color: var(--tinta); text-decoration: none; }
+  .loop b { color: var(--terra-osc); } .loop span { display: block; margin-top: 6px; font-weight: 700; color: var(--terra-osc); }
+  .imperio { margin: 48px 0 0; padding: 26px 22px 24px; border-radius: 22px; background: var(--tinta); color: #E8E2D6; }
+  .imperio h2 { color: #fff; font-size: 34px; margin-top: 0; } .imperio h2 em { color: var(--terra); }
+  .imperio p { margin: 0 0 14px; } .imperio b { color: #fff; }
+  .imperio ul { list-style: none; padding: 0; margin: 0 0 18px; display: grid; gap: 8px; }
+  .imperio li { background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.1); border-radius: 12px; padding: 10px 14px; }
+  .imperio .cifra { font: 400 26px/1.25 var(--serif); color: #fff; margin: 6px 0 16px; }
+  .imperio .cifra em { color: var(--terra); }
+  .imperio .boton { margin-bottom: 8px; } .imperio .nota { color: #B9B2A6; }
+  footer { margin-top: 52px; padding-top: 22px; border-top: 1px solid var(--linea); font-size: 15px; color: var(--suave); }
+  footer a { color: var(--tinta); font-weight: 700; text-decoration: none; } footer em { font-family: var(--serif); font-size: 19px; color: var(--terra); }
+</style>
+</head>
+<body>
+<main>
+
+  <div class="cabeza">
+    <img src="img/mascota-regalo.png" alt="">
+    <span class="etiqueta">GRATIS · EN ESPAÑOL</span>
+  </div>
+
+  <h1><em>5 agentes de IA</em> que hacen el trabajo de 5 empleados</h1>
+  <p class="bajada">Es el prompt de <strong>Claude Code</strong> con el que les he sumado entre 5.000 y 10.000 dólares extra de facturación al mes a los negocios con los que trabajo. Le das tu negocio y Claude arma <strong>5 agentes que trabajan en cadena</strong>: investigan a tu cliente, escriben tus anuncios y tu video de ventas, publican tu página y suben tus campañas.</p>
+
+  <div class="agentes" aria-label="Los 5 agentes">
+    <div class="agente"><span class="n">1</span><span class="e">🔎</span><b>El investigador</b><small>Conoce a tu cliente ideal a fondo</small></div>
+    <div class="agente"><span class="n">2</span><span class="e">✍️</span><b>El copywriter</b><small>Escribe tus anuncios con 4 ganchos</small></div>
+    <div class="agente"><span class="n">3</span><span class="e">🎬</span><b>El guionista</b><small>Escribe tu video de ventas</small></div>
+    <div class="agente"><span class="n">4</span><span class="e">🖥️</span><b>El diseñador</b><small>Publica tu página de ventas</small></div>
+    <div class="agente"><span class="n">5</span><span class="e">📣</span><b>El tráfico</b><small>Sube y optimiza tus campañas</small></div>
+  </div>
+  <div class="cadena"><span>⛓️</span><div>Cada agente trabaja con lo que le entregó el anterior. <b>El resultado:</b> clientes potenciales calificados que llegan a tu página a pedir una cita.</div></div>
+
+  <ul class="avisos">
+    <li>📱 <b>Los agentes 1, 2 y 3 funcionan en la app de Claude</b>, incluso con el plan gratis. Los agentes 4 y 5 necesitan <b>Claude Code</b> (plan Pro), porque son los que publican tu página y suben tus campañas.</li>
+    <li>⏱️ <b>Copiarlo toma 10 segundos.</b> Responder las preguntas que te hace Claude, unos 10 minutos. Lo demás lo hacen los agentes.</li>
+    <li>🎯 <b>Sirve para</b> coaches, consultores, agencias, infoproductos y negocios de servicios que venden por cita o por llamada.</li>
+  </ul>
+
+  <a class="loop" href="#imperio">🎁 <b>Este prompt es solo una muestra de Imperio</b>, el equipo de agentes de IA que hace el marketing y trae las ventas de los negocios de mis clientes: con él hacen en 3 días lo que antes les tomaba 30.<span>Al final te cuento qué hacen los agentes que ya tengo montados ↓</span></a>
+
+  <section class="paso">
+    <div class="num">1</div>
+    <h2>Ten tu cuenta de <em>Claude</em></h2>
+    <p>Si ya usas Claude, salta al paso 2. Si no, crea tu cuenta gratis. Para los 5 agentes completos vas a necesitar el plan <b>Pro</b> y la app de escritorio, que trae Claude Code.</p>
+    <a class="boton" href="https://claude.ai" target="_blank" rel="noopener">Entrar a Claude →</a>
+    <p class="nota">Con el plan gratis ya puedes correr los agentes 1, 2 y 3 en la app: la investigación, los anuncios y el guion de tu video de ventas.</p>
+  </section>
+
+  <section class="paso">
+    <div class="num">2</div>
+    <h2>Copia <em>el prompt</em></h2>
+    <p>Este es el prompt completo, tal como lo leo en el video:</p>
+    <div class="term largo">
+      <div class="barra"><i style="background:#FF5F57"></i><i style="background:#FEBC2E"></i><i style="background:#28C840"></i><span>prompt · 5 agentes</span></div>
+<pre id="prompt">Actúa como un consultor experto en escalar negocios con marketing digital, con más de 6 años de experiencia ayudando a dueños de negocio a crear sistemas que les atraigan clientes de alto valor en automático.
+
+Tu objetivo es crearme 5 agentes que atraigan clientes potenciales calificados y los conviertan en citas de venta. Cada agente trabaja con lo que le entregó el anterior.
+
+<span class="ag">Agente 1. El investigador.</span> Crea el perfil de mi cliente ideal. Investiga en foros y en internet sus sueños, deseos, dolores, miedos, objeciones, problemas profundos y problemas filosóficos.
+
+<span class="ag">Agente 2. El copywriter.</span> Escribe guiones de anuncios para Meta con la fórmula AIDA y las de Alex Hormozi. Investiga por lo menos 30 fórmulas de ganchos y para cada anuncio dame mínimo 4 ganchos distintos.
+
+<span class="ag">Agente 3. El guionista.</span> Escribe el guion de un video de ventas de 10 minutos que despierte el deseo de compra en personas que no me conocen. Usa gatillos mentales, copywriting avanzado, técnicas para cambiar creencias y las estructuras de Russell Brunson, padre del marketing digital moderno.
+
+<span class="ag">Agente 4. El diseñador de la página web.</span> Conéctate a Cloudflare con su CLI y publica una página con el video de ventas, los casos de éxito de mis clientes y una promesa que dé ganas de ver el VSL. La promesa debe tener el sueño de mi cliente, los dolores que quiere dejar atrás, por qué mi oferta es única y en cuánto tiempo verá resultados.
+
+<span class="ag">Agente 5. El tráfico.</span> Conecta Claude Code a mi cuenta de Meta Ads con el CLI. Sube las campañas, optimízalas y lleva gente a mi página web para conseguir prospectos calificados en automático. Antes de activar cualquier campaña, muéstrame el presupuesto y espera mi confirmación.
+
+Antes de empezar, hazme las preguntas que necesites sobre mi nicho, mi cliente ideal, mi oferta, mi precio y mi negocio. Ármalo todo como un plan claro y accionable. Quiero ejecutar, no estudiar.</pre>
+    </div>
+    <button class="boton" type="button" data-copiar-de="prompt">📋 Copiar el prompt</button>
+    <div class="acciones"><a href="prompt.txt" download="prompt-5-agentes.txt">⬇ Descargarlo como archivo de texto</a></div>
+    <p class="nota" style="margin-top:12px">¿Estás en el celular y no te deja copiar? Abre esta página en tu navegador (Safari o Chrome) o descárgalo como archivo de texto.</p>
+  </section>
+
+  <section class="paso">
+    <div class="num">3</div>
+    <h2>Pégalo y responde <em>sus preguntas</em></h2>
+    <p>Abre una conversación nueva (en <b>Claude Code</b> si vas a usar los 5 agentes), pega el prompt y dale Enter. Antes de arrancar, Claude te va a preguntar por tu nicho, tu cliente ideal, tu oferta, tu precio y tu negocio. <b>Entre más detalle le des, mejor te queda.</b></p>
+    <h3>Ten a mano antes de empezar</h3>
+    <ul>
+      <li>Qué vendes, a quién y a qué precio.</li>
+      <li>2 o 3 casos de éxito de tus clientes, con números si los tienes.</li>
+      <li>Por qué te compran a ti y no a otro.</li>
+      <li>Las objeciones que más escuchas antes de que alguien te compre.</li>
+    </ul>
+    <p class="nota">Ve agente por agente: revisa lo que te entrega cada uno, pídele cambios y solo después dile que siga con el siguiente.</p>
+  </section>
+
+  <section class="paso">
+    <div class="num">4</div>
+    <h2>Conecta los <em>agentes 4 y 5</em></h2>
+    <p>Para publicar tu página y subir tus campañas, Claude Code se conecta a tu cuenta de <b>Cloudflare</b> (donde vive tu página, es gratis) y a tu cuenta de <b>Meta Ads</b>. Si es tu primera vez, pégale este mensaje en Claude Code:</p>
+    <div class="term">
+      <div class="barra"><i style="background:#FF5F57"></i><i style="background:#FEBC2E"></i><i style="background:#28C840"></i><span>Claude Code</span></div>
+      <pre id="conectar"><span class="p">❯</span> Instala y conecta lo que necesites para publicar mi página en Cloudflare y subir campañas a mi cuenta de Meta Ads. Guíame paso a paso, explícame todo sin tecnicismos y pregúntame antes de gastar cualquier dinero.</pre>
+    </div>
+    <button class="copiar" type="button" data-copiar-de="conectar">📋 Copiar el mensaje</button>
+    <p class="nota" style="margin-top:12px">Los inicios de sesión se hacen en la ventana que Claude te abre en el navegador: <b>nunca le pegues contraseñas en el chat</b>. La conexión con Meta Ads es la parte más técnica; si ahí te trabas, <a href="#imperio">más abajo te cuento cómo te la dejamos lista</a>.</p>
+  </section>
+
+  <section class="seccion">
+    <h2>Lo que te entrega <em>cada agente</em></h2>
+    <div class="rondas">
+      <div class="ronda"><span class="n">1</span><div><b>El investigador:</b> el perfil completo de tu cliente ideal. Sus sueños, deseos, dolores, miedos y objeciones, sacados de lo que esa gente escribe en foros y en internet.</div></div>
+      <div class="ronda"><span class="n">2</span><div><b>El copywriter:</b> guiones de anuncios para Meta con la fórmula AIDA y las de Alex Hormozi, con mínimo 4 ganchos distintos por anuncio para que pruebes cuál funciona.</div></div>
+      <div class="ronda"><span class="n">3</span><div><b>El guionista:</b> el guion de tu video de ventas de 10 minutos, pensado para gente que todavía no te conoce.</div></div>
+      <div class="ronda"><span class="n">4</span><div><b>El diseñador:</b> tu página publicada con el video, los casos de éxito y una promesa con el sueño de tu cliente, lo que quiere dejar atrás, por qué tu oferta es única y en cuánto tiempo verá resultados.</div></div>
+      <div class="ronda"><span class="n">5</span><div><b>El tráfico:</b> tus campañas subidas a Meta Ads y optimizadas, llevando prospectos calificados a tu página. Siempre te muestra el presupuesto antes de activar.</div></div>
+    </div>
+  </section>
+
+  <section class="seccion">
+    <h2>Preguntas <em>frecuentes</em></h2>
+    <details>
+      <summary>¿Cuánto me cuesta?</summary>
+      <p>El prompt es gratis. Claude tiene plan gratis (te alcanza para los agentes 1, 2 y 3) y plan Pro de unos 20 dólares al mes (los 5 agentes con Claude Code). Publicar la página en Cloudflare es gratis. Lo único que pagas aparte es tu presupuesto de anuncios en Meta.</p>
+    </details>
+    <details>
+      <summary>¿Va a gastar plata en anuncios sin preguntarme?</summary>
+      <p>No: el prompt le pide que te muestre el presupuesto y espere tu confirmación antes de activar cualquier campaña. Igual revisa siempre el presupuesto en tu Administrador de anuncios antes de decir que sí.</p>
+    </details>
+    <details>
+      <summary>¿Funciona en ChatGPT?</summary>
+      <p>Los agentes 1, 2 y 3 sí: pégalo igual. Los agentes 4 y 5 necesitan Claude Code, porque son los que publican y suben cosas por ti.</p>
+    </details>
+    <details>
+      <summary>Claude me respondió todo de una vez, sin preguntarme nada</summary>
+      <p>Escríbele: <code>Para. Primero hazme las preguntas sobre mi negocio y espera mis respuestas.</code> Y desde ahí sigue agente por agente.</p>
+    </details>
+    <details>
+      <summary>¿Necesito saber programar?</summary>
+      <p>No. Tú respondes preguntas y apruebas; Claude escribe y ejecuta. Si algo te sale con términos raros o en inglés, pídele que te lo explique en sencillo.</p>
+    </details>
+  </section>
+
+  <section class="imperio" id="imperio">
+    <h2>Esto es solo <em>una muestra</em> de Imperio</h2>
+    <p>Con este prompt, Claude te arma el plan y los primeros entregables. En Imperio tengo <b>todo un equipo de agentes de IA ya construidos y probados</b> que además <b>ejecutan</b>: hacen el trabajo de marketing por ti y traen las ventas del negocio:</p>
+    <ul>
+      <li>✍️ Escriben tus guiones, tus anuncios y tu video de ventas (VSL).</li>
+      <li>🎬 Editan tus reels y crean anuncios animados.</li>
+      <li>📊 Montan y ajustan tus campañas en Meta Ads.</li>
+      <li>🖼️ Diseñan tus carruseles y miniaturas.</li>
+      <li>💬 Responden por WhatsApp e Instagram y agendan a tus clientes.</li>
+    </ul>
+    <p class="cifra">Haces en <em>3 días</em> lo que antes te tomaba <em>30</em>.</p>
+    <p>Es exactamente lo mismo que usan mis clientes, que han sumado <b>entre 5.000 y 10.000 dólares extra cada mes</b> a su facturación. Y si la parte técnica te traba, te lo dejamos conectado y funcionando.</p>
+    <a class="boton" href="https://ig.me/m/soydiegoosorio" target="_blank" rel="noopener">Escríbeme “IMPERIO” por Instagram →</a>
+    <p class="nota">Te cuento cómo funciona y si encaja con tu negocio.</p>
+  </section>
+
+  <footer>
+    <p>Prompt de <a href="https://instagram.com/soydiegoosorio">@soydiegoosorio</a>. Con sistemas así ya llevo más de un millón de dólares vendidos. El texto también está en <a href="https://github.com/diegodoc1111/prompt-agentes">GitHub</a>.</p>
+    <p><em>Cópialo, úsalo y compártelo.</em></p>
+  </footer>
+
+</main>
+<script>
+  function copiarTexto(t, boton) {
+    var listo = function () { var o = boton.textContent; boton.textContent = "✅ Copiado"; setTimeout(function () { boton.textContent = o; }, 1800); };
+    var respaldo = function () {
+      var a = document.createElement("textarea"); a.value = t; a.setAttribute("readonly", "");
+      a.style.position = "fixed"; a.style.top = "-1000px"; document.body.appendChild(a); a.select();
+      var ok = false; try { ok = document.execCommand("copy"); } catch (e) {}
+      document.body.removeChild(a);
+      if (ok) { listo(); } else { boton.textContent = "Mantén presionado el texto para copiarlo"; }
+    };
+    if (navigator.clipboard && window.isSecureContext) { navigator.clipboard.writeText(t).then(listo, respaldo); } else { respaldo(); }
+  }
+  document.querySelectorAll("[data-copiar-de]").forEach(function (b) {
+    b.addEventListener("click", function () {
+      var el = document.getElementById(b.getAttribute("data-copiar-de"));
+      var t = el.innerText.replace(/^❯\s*/, "");
+      copiarTexto(t, b);
+    });
+  });
+</script>
+</body>
+</html>

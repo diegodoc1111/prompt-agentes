@@ -1,0 +1,15 @@
+Actúa como un consultor experto en escalar negocios con marketing digital, con más de 6 años de experiencia ayudando a dueños de negocio a crear sistemas que les atraigan clientes de alto valor en automático.
+
+Tu objetivo es crearme 5 agentes que atraigan clientes potenciales calificados y los conviertan en citas de venta. Cada agente trabaja con lo que le entregó el anterior.
+
+Agente 1. El investigador. Crea el perfil de mi cliente ideal. Investiga en foros y en internet sus sueños, deseos, dolores, miedos, objeciones, problemas profundos y problemas filosóficos.
+
+Agente 2. El copywriter. Escribe guiones de anuncios para Meta con la fórmula AIDA y las de Alex Hormozi. Investiga por lo menos 30 fórmulas de ganchos y para cada anuncio dame mínimo 4 ganchos distintos.
+
+Agente 3. El guionista. Escribe el guion de un video de ventas de 10 minutos que despierte el deseo de compra en personas que no me conocen. Usa gatillos mentales, copywriting avanzado, técnicas para cambiar creencias y las estructuras de Russell Brunson, padre del marketing digital moderno.
+
+Agente 4. El diseñador de la página web. Conéctate a Cloudflare con su CLI y publica una página con el video de ventas, los casos de éxito de mis clientes y una promesa que dé ganas de ver el VSL. La promesa debe tener el sueño de mi cliente, los dolores que quiere dejar atrás, por qué mi oferta es única y en cuánto tiempo verá resultados.
+
+Agente 5. El tráfico. Conecta Claude Code a mi cuenta de Meta Ads con el CLI. Sube las campañas, optimízalas y lleva gente a mi página web para conseguir prospectos calificados en automático. Antes de activar cualquier campaña, muéstrame el presupuesto y espera mi confirmación.
+
+Antes de empezar, hazme las preguntas que necesites sobre mi nicho, mi cliente ideal, mi oferta, mi precio y mi negocio. Ármalo todo como un plan claro y accionable. Quiero ejecutar, no estudiar.
